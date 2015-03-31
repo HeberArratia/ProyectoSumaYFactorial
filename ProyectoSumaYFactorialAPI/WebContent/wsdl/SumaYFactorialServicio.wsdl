@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://Servicio" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://Servicio" xmlns:intf="http://Servicio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://Servicio" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="factorial">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="factorialResponse">
+    <complexType>
+     <sequence>
+      <element name="factorialReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sumaNumeros">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:int"/>
+      <element name="b" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sumaNumerosResponse">
+    <complexType>
+     <sequence>
+      <element name="sumaNumerosReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="factorialRequest">
+
+      <wsdl:part element="impl:factorial" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="factorialResponse">
+
+      <wsdl:part element="impl:factorialResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sumaNumerosResponse">
+
+      <wsdl:part element="impl:sumaNumerosResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sumaNumerosRequest">
+
+      <wsdl:part element="impl:sumaNumeros" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SumaYFactorialServicio">
+
+      <wsdl:operation name="factorial">
+
+         <wsdl:input message="impl:factorialRequest" name="factorialRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:factorialResponse" name="factorialResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sumaNumeros">
+
+         <wsdl:input message="impl:sumaNumerosRequest" name="sumaNumerosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sumaNumerosResponse" name="sumaNumerosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SumaYFactorialServicioSoapBinding" type="impl:SumaYFactorialServicio">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="factorial">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="factorialRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="factorialResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sumaNumeros">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sumaNumerosRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sumaNumerosResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SumaYFactorialServicioService">
+
+      <wsdl:port binding="impl:SumaYFactorialServicioSoapBinding" name="SumaYFactorialServicio">
+
+         <wsdlsoap:address location="http://localhost:8080/ProyectoSumaYFactorialAPI/services/SumaYFactorialServicio"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
