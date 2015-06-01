@@ -1,0 +1,19 @@
+body{
+	background-color: #fbfbfb;
+}
+.entrada{
+	width: 100px;
+	height: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 2em;
+}
+
+#respuesta{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+h1,h3{
+	font-family: Helvetica;
+	color: teal;
+}
