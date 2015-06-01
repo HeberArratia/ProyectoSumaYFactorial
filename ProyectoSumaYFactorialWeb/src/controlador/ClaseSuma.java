@@ -1,4 +1,4 @@
-package controlador;
+ package controlador;
 
 import java.io.IOException;
 
@@ -36,7 +36,7 @@ public class ClaseSuma extends HttpServlet {
 		// Guardamos en una variable lo que retorna la funcion sumaNumeros
 		String resultado = "" + obj.sumaNumeros(dato1, dato2);
 		// Imprimimos la variable resultado en el JSP
-		request.setAttribute("mensaje", "La suma es: "+ resultado );  
+		request.setAttribute("mensajesuma", "La suma es: "+ resultado );  
 		request.getRequestDispatcher("/index.jsp").forward(request, response);	
 	}
 

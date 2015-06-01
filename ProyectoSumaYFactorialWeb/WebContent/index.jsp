@@ -18,7 +18,6 @@
 	<header class="text-center well">
 	<h1>Suma de números y factorial</h1>
 	
-		${mensaje} 
 	
 	</header>
 	<!-- Contenido -->
@@ -39,6 +38,7 @@
 	<!-- fin del formulario -->
 	<div id="respuesta" class="col-xs-12">	
 	</div>
+	${mensajesuma} 
 	</section>
 
 	<section id="factorialnumero" class="text-center col-md-3">
@@ -54,6 +54,7 @@
 		</div>
 	</form>	
 	<!-- fin del formulario -->
+	${mensajefactorial} 
 	</section>
 </div>	
 </body>

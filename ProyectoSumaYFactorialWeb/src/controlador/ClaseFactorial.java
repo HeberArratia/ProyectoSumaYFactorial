@@ -35,7 +35,7 @@ public class ClaseFactorial extends HttpServlet {
 		// Guardamos en una variable lo que retorna la funcion factorial que recibe el dato
 		String resultado = "" + obj.factorial(dato);
 		// Mostramos en el JSP la variable resultado
-		request.setAttribute("mensaje", "El factorial es: "+ resultado );  
+		request.setAttribute("mensajefactorial", "El factorial es: "+ resultado );  
 		request.getRequestDispatcher("/index.jsp").forward(request, response);	
 		
 	}
